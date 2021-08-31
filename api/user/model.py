@@ -6,6 +6,7 @@ class User(db.Model):
     username = db.Column(db.String(10), unique=True, nullable=False)
     email = db.Column(db.String(20), unique=True, nullable=False)
     password = db.Column(db.String(10), nullable=False)
+    status = db.Column(db.Boolean, nullable=False, default=False)
 
     '''def __init__(self, user_id, username, email):
         self.user_id = user_id
